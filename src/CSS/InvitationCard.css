@@ -64,7 +64,7 @@
 /*        HERO SECTION      */
 /* ======================== */
 .hero-section {
-  min-height: 100vh;
+  min-height: 60vh;
   background: linear-gradient(to bottom, var(--color-cream), rgba(188,143,143,0.03));
   position: relative;
 }
@@ -149,8 +149,8 @@
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 92%;
-  max-width: 420px;
+  width: 40%;
+  max-width: 220px;
   z-index: 1000;
 }
 
@@ -172,7 +172,7 @@
 
 .divider-v {
   width: 1px;
-  height: 2.5rem;
+  height: 1.5rem;
   background: rgba(180,83,9,0.25);
 }
 
