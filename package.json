@@ -1,9 +1,11 @@
 {
+  "homepage": "https://github.com/Harshal1292001/Savita_Sager.git",
   "name": "savita-sager",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -11,6 +13,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
