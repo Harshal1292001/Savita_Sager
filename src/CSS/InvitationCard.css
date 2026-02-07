@@ -1,0 +1,187 @@
+/* ======================== */
+/*        VARIABLES         */
+/* ======================== */
+:root {
+  --color-cream:     #fcf8f0;
+  --color-maroon:    #7c1c1c;     /* darker red */
+  --color-amber:     #b45309;
+  --color-gold:      #d4a017;
+  --color-red-tint:  rgba(124, 28, 28, 0.04);
+}
+
+/* ======================== */
+/*        TYPOGRAPHY        */
+/* ======================== */
+.font-marathi {
+  font-family: 'Devanagari', 'Noto Sans Devanagari', system-ui, sans-serif;
+  /* Load proper Marathi font via Google Fonts or local */
+}
+
+/* ======================== */
+/*     MAIN WRAPPER & BG    */
+/* ======================== */
+.invitation-wrapper {
+  background: var(--color-cream);
+  position: relative;
+}
+
+.fixed-bg-pattern {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: radial-gradient(var(--color-amber) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* Floating mandalas */
+.floating-mandala {
+  position: fixed;
+  width: 20rem;
+  height: 20rem;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.top-left    { top: -8rem; left: -8rem; }
+.bottom-right { bottom: -10rem; right: -12rem; }
+
+.animate-spin-slow {
+  animation: spin-slow 50s linear infinite;
+}
+.animate-spin-slow-reverse {
+  animation: spin-slow 60s linear infinite reverse;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ======================== */
+/*        HERO SECTION      */
+/* ======================== */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--color-cream), rgba(188,143,143,0.03));
+  position: relative;
+}
+
+.icon-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(180,83,9,0.3);
+  background: rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.gold-text-shadow {
+  text-shadow: 0 4px 12px rgba(212,160,23,0.4);
+}
+
+.divider {
+  width: 6rem;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--color-amber), transparent);
+}
+
+.scroll-hint { bottom: 3rem; }
+
+/* ======================== */
+/*     COUPLE & CARDS       */
+/* ======================== */
+.jharokha-frame {
+  border: 8px solid transparent;
+  border-image: linear-gradient(to bottom, var(--color-amber), #d4a017, var(--color-amber)) 1;
+  background: #fdf6e9;
+  padding: 6px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease;
+}
+
+.jharokha-frame:hover {
+  transform: scale(1.04);
+}
+
+.couple-card:hover .jharokha-frame {
+  transform: scale(1.06);
+}
+
+/* ======================== */
+/*     EVENT & GLASS        */
+/* ======================== */
+.glass-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(180,83,9,0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.bg-red-tint { background: var(--color-red-tint); }
+
+.text-red-gradient {
+  background: linear-gradient(90deg, #9b1c1c, #c2410c, #9b1c1c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.event-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+/* ======================== */
+/*   STICKY ACTION BAR      */
+/* ======================== */
+.sticky-action-bar {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 420px;
+  z-index: 1000;
+}
+
+.glass-bar {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  padding: 0.75rem 0;
+  font-size: 0.75rem;
+}
+
+.divider-v {
+  width: 1px;
+  height: 2.5rem;
+  background: rgba(180,83,9,0.25);
+}
+
+.tiny { font-size: 0.65rem; letter-spacing: 0.5px; }
+
+/* ======================== */
+/*        RESPONSIVE        */
+/* ======================== */
+@media (min-width: 768px) {
+  .display-md-1 { font-size: 6rem; }
+  .fs-md-4 { font-size: 1.5rem; }
+}
